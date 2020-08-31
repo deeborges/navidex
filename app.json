@@ -1,0 +1,12 @@
+{
+  "name": "navidex",
+  "displayName": "navidex",
+  "expo": {
+    "name": "navidex",
+    "slug": "navidex",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
