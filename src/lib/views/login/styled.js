@@ -1,26 +1,23 @@
 import styled from 'styled-components/native';
 
-export const KeyboardContainer = styled.KeyboardAvoidingView`
+export const Background = styled.View`
   flex: 1;
-`;
-export const SafeArea = styled.SafeAreaView`
-  flex: 1;
-`;
-export const Wrapper = styled.ScrollView`
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
   padding: 0px 16px;
-  padding-top: 106px;
+  background-color: #fff;
+`;
+
+export const Container = styled.KeyboardAvoidingView`
+  justify-content: center;
+  flex: 1;
 `;
 
 export const LogoContainer = styled.View`
-  margin: 56px 112px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 106px 56px 106px;
 `;
 
-export const Logo = styled.Image`
-  width: auto;
-`;
+export const Logo = styled.Image``;
 
 export const InputEmailContainer = styled.View`
   margin: 0 0 32px 0;

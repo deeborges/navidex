@@ -13,20 +13,20 @@ import {
   ContainerButton,
   TextButton,
   SafeArea,
+  Background,
+  Container,
+  ContainerScroll
 } from './styled';
-import { Platform } from 'react-native';
 
 const pathLogo = require('../../../assets/logo.png');
 
 export default function Login({ navigation }) {
   return (
-    <KeyboardContainer
-      behavior={'position'}
-    >
-      <LogoContainer>
-        <Logo source={pathLogo} />
-      </LogoContainer>
-      <Wrapper>
+    <Background behavior={'position'}>
+      <Container>
+        <LogoContainer>
+          <Logo source={pathLogo} />
+        </LogoContainer>
         <InputEmailContainer>
           <InputLabel>E-mail</InputLabel>
           <InputEmail placeHolder="E-mail" />
@@ -38,7 +38,7 @@ export default function Login({ navigation }) {
         <ContainerButton onPress={() => navigation.navigate('RouteNaver')}>
           <TextButton>Entrar</TextButton>
         </ContainerButton>
-      </Wrapper>
-    </KeyboardContainer>
+      </Container>
+    </Background>
   );
 }
