@@ -61,6 +61,9 @@ export const WrapperButtons = styled.View`
 
 export const ContainerButton = styled.View`
   align-items: center;
-  justify-content: center;
-  margin: 0px 12px;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin-top: 8px;
 `;
