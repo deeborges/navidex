@@ -1,21 +1,17 @@
 import React from 'react';
 import {
-  KeyboardContainer,
-  Logo,
-  LogoContainer,
-  Wrapper,
+  Background,
+  Container,
+  ContainerButton,
   InputEmailContainer,
   InputEmail,
   InputLabel,
   InputLabelSenha,
   InputSenhaContainer,
   InputSenha,
-  ContainerButton,
+  Logo,
+  LogoContainer,
   TextButton,
-  SafeArea,
-  Background,
-  Container,
-  ContainerScroll
 } from './styled';
 
 const pathLogo = require('../../../assets/logo.png');
@@ -35,7 +31,7 @@ export default function Login({ navigation }) {
           <InputLabelSenha>Senha</InputLabelSenha>
           <InputSenha placeHolder="Senha" />
         </InputSenhaContainer>
-        <ContainerButton onPress={() => navigation.navigate('RouteNaver')}>
+        <ContainerButton onPress={() => navigation.navigate('RoutePerfilNaver')}>
           <TextButton>Entrar</TextButton>
         </ContainerButton>
       </Container>
