@@ -17,35 +17,36 @@ export const NaverDescriptionContainer = styled.ScrollView`
 `;
 
 export const NaverName = styled.Text`
-  font-size: 22px;
-  font-weight: 700;
   color: #212121;
+  font-family: Montserrat-Bold;
+  font-size: 22px;
   margin-bottom: 4px;
 `;
 
 export const NaverJob = styled.Text`
+  font-family: Montserrat-Regular;
   font-size: 16px;
   color: #212121;
   margin-bottom: 24px;
 `;
 
-export const NaverIdadeContainer = styled.View`
+export const NaverSubdescriptionContainer = styled.View`
   margin-bottom: 24px;
 `;
 
-export const NaverIdadeTitle = styled.Text`
+export const NaverSubdescriptionTitle = styled.Text`
   color: #212121;
-  font-weight: bold;
+  font-family: Montserrat-SemiBold;
 `;
 
-export const NaverIdade = styled.Text`
+export const NaverSubdescriptionValues = styled.Text`
   color: #212121;
+  font-family: Montserrat-Regular;
 `;
 
 export const WrapperButtons = styled.View`
   flex: 1 1;
 `;
-
 
 export default function Naver({ navigation }) {
   useLayoutEffect(() => {
@@ -60,27 +61,27 @@ export default function Naver({ navigation }) {
       <NaverDescriptionContainer>
         <NaverName>Juliano Reis</NaverName>
         <NaverJob>Front-end Developer</NaverJob>
-        
-        <NaverIdadeContainer>
-          <NaverIdadeTitle>Idade</NaverIdadeTitle>
-          <NaverIdade>32</NaverIdade>
-        </NaverIdadeContainer>
-        
-        <NaverIdadeContainer>
-          <NaverIdadeTitle>Tempo de empresa</NaverIdadeTitle>
-          <NaverIdade>3 anos</NaverIdade>
-        </NaverIdadeContainer>
-        
-        <NaverIdadeContainer>
-          <NaverIdadeTitle>Projeto que participou</NaverIdadeTitle>
-          <NaverIdade>
+
+        <NaverSubdescriptionContainer>
+          <NaverSubdescriptionTitle>Idade</NaverSubdescriptionTitle>
+          <NaverSubdescriptionValues>32</NaverSubdescriptionValues>
+        </NaverSubdescriptionContainer>
+
+        <NaverSubdescriptionContainer>
+          <NaverSubdescriptionTitle>Tempo de empresa</NaverSubdescriptionTitle>
+          <NaverSubdescriptionValues>3 anos</NaverSubdescriptionValues>
+        </NaverSubdescriptionContainer>
+
+        <NaverSubdescriptionContainer>
+          <NaverSubdescriptionTitle>
+            Projeto que participou
+          </NaverSubdescriptionTitle>
+          <NaverSubdescriptionValues>
             Mateus Entregas, Canto do Chef, Mateus App, Mateus Cashback, Mateus
             Online PWA
-          </NaverIdade>
-        </NaverIdadeContainer>
-        <WrapperButtons>
-
-        </WrapperButtons>
+          </NaverSubdescriptionValues>
+        </NaverSubdescriptionContainer>
+        <WrapperButtons></WrapperButtons>
       </NaverDescriptionContainer>
     </Wrapper>
   );

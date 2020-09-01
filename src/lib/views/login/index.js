@@ -3,6 +3,7 @@ import {
   Background,
   Container,
   ContainerButton,
+  ContainerSafe,
   InputEmailContainer,
   InputEmail,
   InputLabel,
@@ -18,23 +19,27 @@ const pathLogo = require('../../../assets/logo.png');
 
 export default function Login({ navigation }) {
   return (
-    <Background behavior={'position'}>
-      <Container>
-        <LogoContainer>
-          <Logo source={pathLogo} />
-        </LogoContainer>
-        <InputEmailContainer>
-          <InputLabel>E-mail</InputLabel>
-          <InputEmail placeHolder="E-mail" />
-        </InputEmailContainer>
-        <InputSenhaContainer>
-          <InputLabelSenha>Senha</InputLabelSenha>
-          <InputSenha placeHolder="Senha" />
-        </InputSenhaContainer>
-        <ContainerButton onPress={() => navigation.navigate('RoutePerfilNaver')}>
-          <TextButton>Entrar</TextButton>
-        </ContainerButton>
-      </Container>
-    </Background>
+    <ContainerSafe>
+      <Background behavior={'position'}>
+        <Container>
+          <LogoContainer>
+            <Logo source={pathLogo} />
+          </LogoContainer>
+          <InputEmailContainer>
+            <InputLabel>E-mail</InputLabel>
+            <InputEmail placeHolder="E-mail" />
+          </InputEmailContainer>
+          <InputSenhaContainer>
+            <InputLabelSenha>Senha</InputLabelSenha>
+            <InputSenha secureTextEntry={true} />
+          </InputSenhaContainer>
+          <ContainerButton
+            onPress={() => navigation.navigate('RoutePerfilNaver')}
+          >
+            <TextButton>Entrar</TextButton>
+          </ContainerButton>
+        </Container>
+      </Background>
+    </ContainerSafe>
   );
 }

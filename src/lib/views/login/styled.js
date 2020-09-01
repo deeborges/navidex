@@ -11,6 +11,11 @@ export const Container = styled.KeyboardAvoidingView`
   flex: 1;
 `;
 
+export const ContainerSafe = styled.SafeAreaView`
+  justify-content: center;
+  flex: 1;
+`;
+
 export const LogoContainer = styled.View`
   justify-content: center;
   align-items: center;
@@ -32,11 +37,15 @@ export const InputLabel = styled.Text`
 `;
 
 export const InputEmail = styled.TextInput.attrs({
-  placeHolder: 'E-mail',
+  placeholder: 'E-mail',
+  fontFamily: 'Montserrat-Regular',
+  fontSize: 16,
 })`
   align-items: center;
   border: 1px;
   border-color: #212121;
+  font-family: Montserrat-Regular;
+  font-size: 16px;
   height: 40px;
   padding: 8px;
   justify-content: center;
@@ -55,10 +64,16 @@ export const InputLabelSenha = styled.Text`
   padding-bottom: 4px;
 `;
 
-export const InputSenha = styled.TextInput`
+export const InputSenha = styled.TextInput.attrs({
+  placeholder: 'Senha',
+  fontFamily: 'Montserrat-Regular',
+  fontSize: 16,
+})`
   align-items: center;
   border: 1px;
   border-color: #212121;
+  font-family: Montserrat-Regular;
+  font-size: 16px;
   height: 40px;
   padding: 8px;
   justify-content: center;
@@ -75,6 +90,7 @@ export const ContainerButton = styled.TouchableOpacity`
 
 export const TextButton = styled.Text`
   color: #fff;
+  font-family: Montserrat-Regular;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
