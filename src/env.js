@@ -7,5 +7,5 @@ export const ROUTES_DEVELOPMENT = {
 };
 
 export const ROUTES_PRODUCTION = {
-  baseUrl: '',
+  baseUrl: 'https://navedex-api.herokuapp.com/v1',
 };
