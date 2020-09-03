@@ -1,18 +1,20 @@
 import React from 'react';
+import { Text, View } from 'react-native';
 
 import GenericHeader from '../../../components/generic-header';
-import GenericFormNave from '../../../components/generic-form-naver';
 
 const pathIconBack = require('../../../../assets/icons/back.png');
 
-export default function EditarNaver({ navigation }) {
+export default function HomeNavers({ navigation }) {
   return (
     <>
       <GenericHeader
         pathIcon={pathIconBack}
         event={() => navigation.goBack()}
       />
-      <GenericFormNave title={'Editar'} alias={'editar'} />
+      <View>
+        <Text>Estou na home</Text>
+      </View>
     </>
   );
 }

@@ -1,14 +1,18 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 
+import GenericHeader from '../../../components/generic-header';
 import GenericFormNave from '../../../components/generic-form-naver';
-import HeaderIconBack from '../../../components/header-icon-back';
 
-export default function AdicionarNave({ navigation }) {
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerLeft: () => <HeaderIconBack goBack={() => navigation.goBack()} />,
-    });
-  }, [navigation]);
+const pathIconBack = require('../../../../assets/icons/back.png');
 
-  return <GenericFormNave title={'Adicionar'} alias={'adicionar'} />;
+export default function AdicionarNaver({ navigation }) {
+  return (
+    <>
+      <GenericHeader
+        pathIcon={pathIconBack}
+        event={() => navigation.goBack()}
+      />
+      <GenericFormNave title={'Adicionar'} alias={'adicionar'} />
+    </>
+  );
 }
