@@ -1,45 +1,32 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
+import { KEY_TOKEN } from '../utils/keys';
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [tokenLocal, setTokenLocal] = useState(null);
-  const [statusLoading, setStatusLoading] = useState(false);
+  const [token, setToken] = useState(null);
+  const [loading, enableLoading] = useState(false);
 
   useEffect(() => {
     async function loadTokenStorage() {
-      const tokenStorage = await AsyncStorage.getItem('token');
+      const tokenStorage = await AsyncStorage.getItem(KEY_TOKEN);
       if (tokenStorage) {
-        setTokenLocal(JSON.parse(tokenStorage));
-        setStatusLoading(true);
+        setToken(JSON.parse(tokenStorage));
+        enableLoading(true);
       }
-      setStatusLoading(false);
+      enableLoading(false);
     }
     loadTokenStorage();
   }, []);
 
-  async function saveInLocalStorage(data) {
-    await AsyncStorage.setItem('token', JSON.stringify(data));
-  }
-
-  // async function akgumServicoDeLogin() {
-  //   try {
-  //     // await ... uma chamada à api...
-  //     // se tudo ocorrer bem...
-  //     setTokenLocal(data.data);
-  //     saveInLocalStorage(data.data);
-  //     return;
-  //   } catch (err) {
-  //     throw new Error('Um error qualquer...');
-  //   }
-  // }
-
   return (
-    <AuthContext.Provider value={{
-      tokenLocal,
-      statusLoading
-    }}>
+    <AuthContext.Provider
+      value={{
+        token,
+        loading,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
