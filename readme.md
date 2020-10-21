@@ -1,1 +1,1 @@
-* Na parte de serviço, ignore as chamadas para o axios. Não irei utilizar, mas vou organizar pra ficar no padrão do fetch.
+
